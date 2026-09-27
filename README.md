@@ -1,3 +1,4 @@
+-------------------------------------------------------------------------
 # Python Learning Repository
 
 ## Purpose:
@@ -17,6 +18,7 @@ Python Learning Repository
 
 ### Purpose:
 Structured record of my Python development studies and deliberate practice.
+--------------------------------------------------------------------------
 
 1. books/        Code and exercises tied directly to books
 2. practice/     Deliberate practice of Python concepts
@@ -24,3 +26,5 @@ Structured record of my Python development studies and deliberate practice.
 4. projects/     Larger multi-file applications
 5. experiments/  Small disposable investigations
 6. archive/      Older learning material retained for reference
+
+--------------------------------------------------------------------------
