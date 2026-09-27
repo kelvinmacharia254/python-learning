@@ -15,12 +15,12 @@ Structured record of my Python development studies and deliberate practice.
 ## Repo structure
 Python Learning Repository
 
-Purpose:
+### Purpose:
 Structured record of my Python development studies and deliberate practice.
 
-books/        Code and exercises tied directly to books
-practice/     Deliberate practice of Python concepts
-problems/     General, engineering and algorithmic problem solving
-projects/     Larger multi-file applications
-experiments/  Small disposable investigations
-archive/      Older learning material retained for reference
+1. books/        Code and exercises tied directly to books
+2. practice/     Deliberate practice of Python concepts
+3. problems/     General, engineering and algorithmic problem solving
+4. projects/     Larger multi-file applications
+5. experiments/  Small disposable investigations
+6. archive/      Older learning material retained for reference
