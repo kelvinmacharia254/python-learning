@@ -1,7 +1,7 @@
-# python-learning
+# Python Learning Repository
 
-
-My structured Python learning repository.
+## Purpose:
+Structured record of my Python development studies and deliberate practice.
 
 ## Goals
 
@@ -12,40 +12,15 @@ My structured Python learning repository.
 - Build foundations for Django and backend development
 
 
-## Sample repo structure
+## Repo structure
+Python Learning Repository
 
-python-learning
+Purpose:
+Structured record of my Python development studies and deliberate practice.
 
-README.md
-.gitignore
-
-01-python-basics/
-	- notes/
-	- examples/
-	- exercises/
-
-02-types-and-operations/
-	- notes/
-	- examples/
-  	- exercises/
-
-03-statements-and-syntax/
-	- notes/
-	- examples/
-	- exercises/
-
-04-functions/
-	- notes/
-	- examples/
-	- exercises/
-
-05-modules-and-packages/
-
-06-classes-and-oop/
-
-07-exceptions/
-
-08-advanced-python/
-	- dsa/
-	- challenges/
-	- mini-projects/
+books/        Code and exercises tied directly to books
+practice/     Deliberate practice of Python concepts
+problems/     General, engineering and algorithmic problem solving
+projects/     Larger multi-file applications
+experiments/  Small disposable investigations
+archive/      Older learning material retained for reference
