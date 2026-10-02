@@ -6,10 +6,9 @@ number_list = [1,2,3] # Test input
 
 
 def summary(lst):
-    if len(lst):
-        total = sum(lst)
-        average = total/len(lst)
-        print(f"Number list: {lst}")
+    if len(lst): # list not empty
+        total = sum(lst) # calculate total
+        average = total/len(lst) # average
         print(f"Total: {total}")
         print(f"Average: {average}")
         for number in lst:
@@ -24,6 +23,10 @@ def summary(lst):
 
 # self test
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        print(f"sys.argv: {sys.argv[0]}, {sys.argv[1]}")
+    number_list = []
+    for n in sys.argv[1:]: # strip index 0
+        number_list.append(int(n))
+
+    print(number_list)
     summary(number_list)
+    
