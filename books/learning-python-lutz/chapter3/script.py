@@ -6,3 +6,5 @@ print(2**100)
 x = 'Hack'
 print(x*8)
 print(x*10)
+
+input() # add to delay execution
