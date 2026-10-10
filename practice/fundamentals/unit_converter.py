@@ -11,7 +11,7 @@ def unit_convert(length):
     '''
     convert length in meters to mm
     '''
-    length = round(length *1000)
+    length = length *1000
 
     return length
 
