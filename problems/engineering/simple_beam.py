@@ -18,6 +18,10 @@ length = 10 # m
 udl_load = 10 # kN/m
 
 def calculate_beam_response(length,udl_load):
+    """
+    function to calculate midspan moment, support reactions,
+    SFD and BMD for a simply supported beam
+    """
     moment = round((udl_load*length*length)/8,2) # wl^2/8
     reaction = round((udl_load*length)/2,2)
 
