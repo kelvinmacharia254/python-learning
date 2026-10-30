@@ -22,19 +22,18 @@ def calculate_beam_response(length,udl_load):
     function to calculate midspan moment, support reactions,
     SFD and BMD for a simply supported beam
     """
-    moment = round((udl_load*length*length)/8,2) # wl^2/8
-    reaction = round((udl_load*length)/2,2)
+    moment = (udl_load*length*length)/8 # wl^2/8
+    reaction = (udl_load*length)/2 # wl/2
 
-    # moment_at_x = wx(l/2 - x/2)
-    # shear_at_x = w(l/2-x)
+    x_values = [] # interval breaks
+    moment_at_x = [] # moment values to plot BMD
+    shear_at_x = [] # shear values to plot SFD
 
-    x_values = []
-    moment_at_x = []
-    shear_at_x = []
-
-    length = int(length)
+    intervals = 10 # selected number of intervals
+    spacing = length/intervals # spacing
     
-    for x in range(0,length+1, 1):
+    for i in range(intervals+1):
+         x = i*spacing # x value is given by i_th interval multiplied by interval spacing 
          x_values.append(x)
          moment_x = udl_load*x*((length/2)-(x/2))
          shear_x = udl_load*((length/2)-x)
