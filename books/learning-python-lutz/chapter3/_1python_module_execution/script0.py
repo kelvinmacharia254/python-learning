@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # A first Python script
+# Test running python scripts - use of shebang line and input() to delay execution
 import sys
 print(sys.platform)
 print(2**100)
