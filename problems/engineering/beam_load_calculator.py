@@ -43,6 +43,8 @@ def calculate_reactions(span, loads):
 
 # Test Load cases
 test_pass_counter = 0
+test_case_no = 0
+test_case_bools = []
 for span, load_case, expected_r_a, expected_r_b in test_cases:
     reaction_a, reaction_b, total_load, moment_a, equilibrium_check = calculate_reactions(span, load_case)
     # test
@@ -50,7 +52,9 @@ for span, load_case, expected_r_a, expected_r_b in test_cases:
     reaction_b_test = math.isclose(reaction_b,expected_r_b, abs_tol=1e-9)
     overall_test_pass = equilibrium_check and reaction_a_test and reaction_b_test
     test_pass_counter += 1 if overall_test_pass else 0
-
+    test_case_no += 1
+    test_case_bools.append((test_case_no, overall_test_pass))
+ 
     # alternative approach to count test passed
     # if overall_test_pass:
     #     test_pass_counter += 1
@@ -64,4 +68,9 @@ for span, load_case, expected_r_a, expected_r_b in test_cases:
     print(f"Equilibrium Check:{'PASS' if equilibrium_check else 'FAIL'}")
     print("-------------------------------------------------------------------------")
 
-print(f"Tests passed: {test_pass_counter}/{len(test_cases)}")
+
+for test_case_no, test_result in test_case_bools:
+    print(f"Test Case {test_case_no}:{'PASS' if test_result else 'FAIL'}")
+print()
+print(f"Tests passed: {test_pass_counter}/{len(test_cases)}") 
+print(f"Overal suite: {'FAIL' if test_pass_counter != len(test_cases) else 'PASS'}")
