@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 """
 BEAM LOAD CALCULATOR
 --------------------
@@ -49,15 +49,14 @@ def calculate_reactions(span, loads):
         ValueError: If the beam span is zero or negative.
     """
 
-    if span <= 0:
-        raise ValueError("Span can't be zero or negative")
-
     reaction_a = 0
     reaction_b = 0
     total_load = 0
     applied_moment_a = 0
 
     for magnitude, position in loads:
+        if not (0 <= position <= span): # ensure no -ve span and load postion. Also load position cannot exceed span.
+            raise ValueError(f"Load position {position} is outside the span [0, {span}]")
         # Influence line ordinates for support reactions
         ordinate1 = (span - position) / span
         ordinate2 = position / span
